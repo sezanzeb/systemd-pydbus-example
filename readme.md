@@ -26,7 +26,8 @@ systemctl status systemd-pydbus-example
 
 **.service files**
 
-- [freedesktop.org docs](https://dbus.freedesktop.org/doc/dbus-daemon.1.html)
+- [freedesktop.org](https://dbus.freedesktop.org/doc/dbus-daemon.1.html)
+- [wiki.archlinux.org](https://wiki.archlinux.org/index.php/Systemd)
 
 **pydbus**
 
