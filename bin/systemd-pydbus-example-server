@@ -6,8 +6,6 @@ import getpass
 from gi.repository import GLib
 from pydbus import SystemBus
 
-loop = GLib.MainLoop()
-
 
 BUS_NAME = 'example.foo.bar'
 
@@ -44,4 +42,5 @@ class ExampleFooBar:
 # your D-Bus service outside of systemd in a terminal.
 bus = SystemBus()
 bus.publish(BUS_NAME, ExampleFooBar())
+loop = GLib.MainLoop()
 loop.run()

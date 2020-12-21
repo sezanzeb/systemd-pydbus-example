@@ -23,6 +23,6 @@ if __name__ == '__main__':
     bus = SystemBus()
     service = bus.get(BUS_NAME)
 
-    # should print 1
+    # should print "1"
     response = service.log(options.message)
     print(f'Service answered "{response}"')
