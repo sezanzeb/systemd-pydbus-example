@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+
+import sys
+from argparse import ArgumentParser
+
+from pydbus import SystemBus
+
+
+BUS_NAME = 'example.foo.bar'
+
+
+if __name__ == '__main__':
+    parser = ArgumentParser()
+    parser.add_argument(
+        '--message', action='store', dest='message',
+        help='Message to send to the service'
+    )
+
+    options = parser.parse_args(sys.argv[1:])
+
+    # SystemBus again, just like the server
+    bus = SystemBus()
+    service = bus.get(BUS_NAME)
+
+    # should print 1
+    response = service.log(options.message)
+    print(f'Service answered "{response}"')

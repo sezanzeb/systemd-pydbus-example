@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+
+import getpass
+
+from gi.repository import GLib
+from pydbus import SystemBus
+
+loop = GLib.MainLoop()
+
+
+BUS_NAME = 'example.foo.bar'
+
+
+class ExampleFooBar:
+    """Example dbus service.
+
+    This alone doesn't do anything, you could also import this, construct
+    an instance, and call the methods like with any other object.
+    """
+    dbus = f"""
+        <node>
+            <interface name='{BUS_NAME}'>
+                <method name='log'>
+                    <arg type='s' name='message' direction='in'/>
+                    <arg type='d' name='response' direction='out'/>
+                </method>
+            </interface>
+        </node>
+    """
+
+    def __init__(self):
+        """Log some information."""
+        user = getpass.getuser()
+        print(f'I am running as "{user}"')
+
+    def log(self, message):
+        """Log the received message, return 1."""
+        print(f'Received "{message}"')
+        return 1
+
+
+# It needs to be SystemBus. SessionBus would be used if you start
+# your D-Bus service outside of systemd in a terminal.
+bus = SystemBus()
+bus.publish(BUS_NAME, ExampleFooBar())
+loop.run()

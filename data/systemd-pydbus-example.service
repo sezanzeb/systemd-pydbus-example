@@ -1,0 +1,13 @@
+# https://wiki.archlinux.org/index.php/Systemd
+
+[Unit]
+Description=Example setup for a pydbus server controllable via systemctl
+
+[Service]
+Environment=PYTHONUNBUFFERED=true
+Type=dbus
+BusName=example.foo.bar
+ExecStart=/usr/bin/systemd-pydbus-example-server
+
+[Install]
+WantedBy=default.target
