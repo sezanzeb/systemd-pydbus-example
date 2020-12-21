@@ -24,18 +24,18 @@ systemctl status systemd-pydbus-example
 
 ## Resources
 
-.service files
+**.service files**
 
-[freedesktop.org docs](https://dbus.freedesktop.org/doc/dbus-daemon.1.html)
+- [freedesktop.org docs](https://dbus.freedesktop.org/doc/dbus-daemon.1.html)
 
-pydbus
+**pydbus**
 
-[LEW21/pydbus example](https://github.com/LEW21/pydbus/tree/cc407c8b1d25b7e28a6d661a29f9e661b1c9b964/examples/clientserver)
+- [LEW21/pydbus example](https://github.com/LEW21/pydbus/tree/cc407c8b1d25b7e28a6d661a29f9e661b1c9b964/examples/clientserver)
 
-PYTHONUNBUFFERED
+**PYTHONUNBUFFERED**
 
-[docs.python.org](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED)
-[unix.stackexchange.com](https://unix.stackexchange.com/questions/285419/systemd-python-service-not-sending-all-output-to-syslog)
+- [docs.python.org](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED)
+- [unix.stackexchange.com](https://unix.stackexchange.com/questions/285419/systemd-python-service-not-sending-all-output-to-syslog)
 
 ## License
 
