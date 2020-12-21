@@ -2,8 +2,6 @@
 
 Example setup for a pydbus server controllable via systemctl.
 
-Public Domain, do whatever you want with this code.
-
 ```
 sudo pip install git+https://github.com/sezanzeb/systemd-pydbus-example.git
 sudo systemctl daemon-reload
@@ -38,3 +36,7 @@ PYTHONUNBUFFERED
 
 [docs.python.org](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED)
 [unix.stackexchange.com](https://unix.stackexchange.com/questions/285419/systemd-python-service-not-sending-all-output-to-syslog)
+
+## License
+
+Public Domain, do whatever you want with this code.
