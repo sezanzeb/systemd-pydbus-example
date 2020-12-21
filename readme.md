@@ -1,10 +1,8 @@
 # Systemd PyDbus Example
 
-Example setup for a pydbus server controllable via systemctl.
+Example setup for a pydbus service controllable via systemctl.
 
-Public Domain, do whatever you want with this code.
-
-```
+```bash
 sudo pip install git+https://github.com/sezanzeb/systemd-pydbus-example.git
 sudo systemctl daemon-reload
 sudo systemctl start systemd-pydbus-example
@@ -13,28 +11,33 @@ sudo systemctl start systemd-pydbus-example
 The service is now running with root permissions and ready to receive
 messages. Communicate with the server using the client:
 
-```
+```bash
 systemd-pydbus-example-client --message hello
 ```
 
-The server should have received the message and "hello" should now be
+The service should have received the message and "hello" should now be
 visible in:
 
-```
+```bash
 systemctl status systemd-pydbus-example
 ```
 
 ## Resources
 
-.service files
+**.service files**
 
-[freedesktop.org docs](https://dbus.freedesktop.org/doc/dbus-daemon.1.html)
+- [freedesktop.org](https://dbus.freedesktop.org/doc/dbus-daemon.1.html)
+- [wiki.archlinux.org](https://wiki.archlinux.org/index.php/Systemd)
 
-pydbus
+**pydbus**
 
-[LEW21/pydbus example](https://github.com/LEW21/pydbus/tree/cc407c8b1d25b7e28a6d661a29f9e661b1c9b964/examples/clientserver)
+- [LEW21/pydbus example](https://github.com/LEW21/pydbus/tree/cc407c8b1d25b7e28a6d661a29f9e661b1c9b964/examples/clientserver)
 
-PYTHONUNBUFFERED
+**PYTHONUNBUFFERED**
 
-[docs.python.org](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED)
-[unix.stackexchange.com](https://unix.stackexchange.com/questions/285419/systemd-python-service-not-sending-all-output-to-syslog)
+- [docs.python.org](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED)
+- [unix.stackexchange.com](https://unix.stackexchange.com/questions/285419/systemd-python-service-not-sending-all-output-to-syslog)
+
+## License
+
+Public Domain, do whatever you want with this code.
