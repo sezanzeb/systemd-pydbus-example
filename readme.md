@@ -1,6 +1,6 @@
 # Systemd PyDbus Example
 
-Example setup for a pydbus server controllable via systemctl.
+Example setup for a pydbus service controllable via systemctl.
 
 ```
 sudo pip install git+https://github.com/sezanzeb/systemd-pydbus-example.git
@@ -15,7 +15,7 @@ messages. Communicate with the server using the client:
 systemd-pydbus-example-client --message hello
 ```
 
-The server should have received the message and "hello" should now be
+The service should have received the message and "hello" should now be
 visible in:
 
 ```
