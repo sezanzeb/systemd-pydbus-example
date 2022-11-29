@@ -3,7 +3,9 @@
 Example setup for a pydbus service controllable via systemctl.
 
 ```bash
-sudo pip install git+https://github.com/sezanzeb/systemd-pydbus-example.git
+git clone https://github.com/sezanzeb/systemd-pydbus-example
+cd systemd-pydbus-example
+sudo python3 setup.py install
 sudo systemctl daemon-reload
 sudo systemctl start systemd-pydbus-example
 ```
